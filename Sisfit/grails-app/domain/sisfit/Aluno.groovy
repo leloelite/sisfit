@@ -26,6 +26,7 @@ class Aluno {
 			observacoes column: 'observacoes'
 			avaliacaoFisica column:'avaliacaoFisica'
 		}
+		
 	}
 	
     static constraints = {
