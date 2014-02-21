@@ -13,9 +13,9 @@ class Turma {
 	static mapping = {
 		table 'turma'
 			columns {
-				diaSemana column: diaSemana
-				horaInicio column: horaInicio
-				horaFim Column: horaFim
+				diaSemana column: 'diaSemana'
+				horaInicio column: 'horaInicio'
+				horaFim Column: 'horaFim'
 			}
 	}
 }

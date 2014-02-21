@@ -11,8 +11,8 @@ class Pagamento {
 	static mapping = {
 		table 'pagamento'
 			columns {
-				data column: data
-				valor column: valor				
+				data column: 'data'
+				valor column: 'valor'				
 			}
 	}
 }
