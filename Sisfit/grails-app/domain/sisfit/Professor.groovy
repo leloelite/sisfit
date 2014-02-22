@@ -12,7 +12,8 @@ class Professor {
 	String observacoes
 	int ctps
 	int cref
-	
+	Modalidade modalidade
+	 
 	static mapping = {
 		tablePerHierarchy false
 		table 'professor'
@@ -26,7 +27,7 @@ class Professor {
 			observacoes column: 'observacoes'
 			ctps column:'ctps'
 			cref column: 'cref'
-		}
+		}	
 	}
 	
     static constraints = {

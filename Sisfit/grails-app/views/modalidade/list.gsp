@@ -1,21 +1,21 @@
 
-<%@ page import="sisfit.Alocacao" %>
+<%@ page import="sisfit.Modalidade" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'alocacao.label', default: 'Alocacao')}" />
+		<g:set var="entityName" value="${message(code: 'modalidade.label', default: 'Modalidade')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#list-alocacao" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<a href="#list-modalidade" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
-		<div id="list-alocacao" class="content scaffold-list" role="main">
+		<div id="list-modalidade" class="content scaffold-list" role="main">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
@@ -24,18 +24,22 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="nome" title="${message(code: 'modalidade.nome.label', default: 'Nome')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
-				<g:each in="${alocacaoInstanceList}" status="i" var="alocacaoInstance">
+				<g:each in="${modalidadeInstanceList}" status="i" var="modalidadeInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${modalidadeInstance.id}">${fieldValue(bean: modalidadeInstance, field: "nome")}</g:link></td>
 					
 					</tr>
 				</g:each>
 				</tbody>
 			</table>
 			<div class="pagination">
-				<g:paginate total="${alocacaoInstanceTotal}" />
+				<g:paginate total="${modalidadeInstanceTotal}" />
 			</div>
 		</div>
 	</body>
