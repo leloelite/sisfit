@@ -1,5 +1,7 @@
 package sisfit
 
+import javax.persistence.JoinTable;
+
 class Professor {
 	
 	String nome
@@ -14,6 +16,7 @@ class Professor {
 	int cref
 	Modalidade modalidade
 	 
+	static hasMany = [modalidade: Modalidade]
 	static mapping = {
 		tablePerHierarchy false
 		table 'professor'
@@ -27,9 +30,12 @@ class Professor {
 			observacoes column: 'observacoes'
 			ctps column:'ctps'
 			cref column: 'cref'
+			modalidade jointable: [column: 'id']
 		}	
 	}
 	
     static constraints = {
+		
+		modalidade size: 1..5
     }
 }

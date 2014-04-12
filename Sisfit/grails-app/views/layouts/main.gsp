@@ -16,9 +16,61 @@
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
 		<g:layoutHead/>
 		<r:layoutResources />
-	</head>
+		<style>
+		ul
+	{
+	list-style-type:none;
+	padding-top:15px;
+	padding-bottom:30px;
+	padding-right:50px;
+	padding-left:50px;
+	overflow:hidden;
+	background-color:#660000;
+	border-radius: 10px;
+	margin:auto;
+	width:90%;
+	border-width:5px;
+	}
+	li.controller
+	{	
+	float:left;
+	list-style-type:none;
+	padding-top:3px;
+	padding-bottom:5px;
+	padding-right:10px;
+	padding-left:10px;
+	overflow:hidden;
+	background-color:#FFFF42;
+	border-radius: 10px;
+	margin:7px;
+	left: 30%;
+	margin-left: 40px;
+	}
+	div.logo
+	{
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+	position: absolute;
+	left: 30%;
+	top: 50%
+	margin-left:-110px;
+	margin-top:0px;
+	}
+	body 
+	{
+	background-color:#dfc2c2;
+	}
+</style>
+</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+	<ul>
+		<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+		<center>
+			<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName.replaceAll('Controller', '').replaceAll('sisfit.','').replaceAll('grails.plugin.databasemigration.Dbdoc','')}</g:link></li>
+		</center>
+		</g:each>
+	</ul>
+	<div class="logo"><img src="${resource(dir: 'images', file: 'SysFitness.png')}" alt="Grails"/></div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
