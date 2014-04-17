@@ -17,60 +17,125 @@
 		<g:layoutHead/>
 		<r:layoutResources />
 		<style>
-		ul
-	{
-	list-style-type:none;
-	padding-top:15px;
-	padding-bottom:30px;
-	padding-right:50px;
-	padding-left:50px;
-	overflow:hidden;
-	background-color:#660000;
-	border-radius: 10px;
-	margin:auto;
-	width:90%;
-	border-width:5px;
-	}
-	li.controller
-	{	
-	float:left;
-	list-style-type:none;
-	padding-top:3px;
-	padding-bottom:5px;
-	padding-right:10px;
-	padding-left:10px;
-	overflow:hidden;
-	background-color:#FFFF42;
-	border-radius: 10px;
-	margin:7px;
-	left: 30%;
-	margin-left: 40px;
-	}
-	div.logo
-	{
-	opacity:0.4;
-	filter:alpha(opacity=40); /* For IE8 and earlier */
-	position: absolute;
-	left: 30%;
-	top: 50%
-	margin-left:-110px;
-	margin-top:0px;
-	}
-	body 
-	{
-	background-color:#dfc2c2;
-	}
+
+.menu{
+list-style-type:none;
+float:left;
+padding-top:15px;
+padding-bottom:30px;
+padding-right:10px;
+padding-left:10px;
+background-color:#660000;
+border-radius: 10px;
+margin:auto;
+width:90%;
+border-width:5px;
+}
+
+.menu li{
+position:relative;
+float:left;
+padding-left:10px;
+padding-rigth:10px;
+background-color:#FF0000;
+padding-top:3px;
+padding-bottom:5px;
+border-radius: 10px;
+margin:7px;
+left: 0%;
+margin-left: 0px;
+width:150px;
+height:25px;
+line-height:25px;
+}
+
+.menu li a {
+font-family:Tahoma;
+font-size:13px;
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menu li ul {
+position:absolute;
+top::28px;
+left:-20px;
+display:none;
+}
+
+.menu li:hover ul, .menu lu ul li:hover ul, .menu li.over ul, .menu li ul li.over ul {
+	display:block;
+}
+
+.menu li ul li {
+border:1px solid #990000;
+display:block;
+width:150px;
+height:25px;
+line-height:25px;
+}
+div.logo
+{
+opacity:0.4;
+filter:alpha(opacity=40); /* For IE8 and earlier */
+position: absolute;
+left: 30%;
+top: 50%
+margin-left:-110px;
+margin-top:0px;
+}
+body
+{
+background-color:#dfc2c2;
+}
 </style>
 </head>
 	<body>
-	<ul>
-		<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-		<center>
-			<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName.replaceAll('Controller', '').replaceAll('sisfit.','').replaceAll('grails.plugin.databasemigration.Dbdoc','')}</g:link></li>
-		</center>
-		</g:each>
-	</ul>
 	<div class="logo"><img src="${resource(dir: 'images', file: 'SysFitness.png')}" alt="Grails"/></div>
+		<div class="menu">
+			<li><a href="#" >Aluno</a>
+				<ul>
+					<li><a href="/Sisfit/aluno/create">Novo</a></li>
+					<li><a href="/Sisfit/aluno/index">Listar</a></li>
+				</ul>
+			</li>
+			<li><a href="#" >Alocaçao</a>
+				<ul>
+					<li><a href="/Sisfit/alocacao/create">Novo</a></li>
+					<li><a href="/Sisfit/alocacao/index">Listar</a></li>
+				</ul>
+			</li>
+			<li><a href="#" >Mensalidade</a>
+				<ul>
+					<li><a href="/Sisfit/mensalidade/create">Novo</a></li>
+					<li><a href="/Sisfit/mensalidade/index">Listar</a></li>
+				</ul>
+			</li>
+			<li><a href="#" >Modalidade</a>
+				<ul>
+					<li><a href="/Sisfit/modalidade/create">Novo</a></li>
+					<li><a href="/Sisfit/modalidade/index">Listar</a></li>
+				</ul>
+			</li>
+			<li><a href="#" >Pagamento</a>
+				<ul>
+					<li><a href="/Sisfit/pagamento/create">Novo</a></li>
+					<li><a href="/Sisfit/pagamento/index">Listar</a></li>
+				</ul>
+			</li>
+			<li><a href="#" >Professor</a>
+				<ul>
+					<li><a href="/Sisfit/professor/create">Novo</a></li>
+					<li><a href="/Sisfit/professor/index">Listar</a></li>
+				</ul>
+			</li>
+			<li><a href="#" >Turma</a>
+				<ul>
+					<li><a href="/Sisfit/turma/create">Novo</a></li>
+					<li><a href="/Sisfit/turma/index">Listar</a></li>
+				</ul>
+			</li>
+		</div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>

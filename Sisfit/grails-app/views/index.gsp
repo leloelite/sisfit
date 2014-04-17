@@ -2,22 +2,9 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
+		<title>SisFit</title>
 		<style type="text/css" media="screen">
-		ul
-		{
-			list-style-type:none;
-			padding-top:15px;
-			padding-bottom:30px;
-			padding-right:50px;
-			padding-left:50px;
-			overflow:hidden;
-			background-color:#660000;
-			border-radius: 10px;
-			margin:auto;
-			width:110%;
-			border-width:5px;
-		}
+	
 			#page-body {
 				margin: 2em 1em 1.25em 18em;
 			}
