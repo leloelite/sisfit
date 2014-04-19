@@ -93,44 +93,51 @@ background-color:#dfc2c2;
 	<body>
 	<div class="logo"><img src="${resource(dir: 'images', file: 'SysFitness.png')}" alt="Grails"/></div>
 		<div class="menu">
-			<li><a href="#" >Aluno</a>
-				<ul>
+		<g:javascript> 
+		function mostrarSubMenu(id){
+			if(document.getElementById(id).style.display=='none'){document.getElementById(id).style.display='block'}else{document.getElementById(id).style.display='none'};
+		}
+		</g:javascript>
+			<li><a href="javascript:;" Onclick="mostrarSubMenu('aluno')">Aluno</a>
+			<div>
+				<ul id="aluno">
 					<li><a href="/Sisfit/aluno/create">Novo</a></li>
 					<li><a href="/Sisfit/aluno/index">Listar</a></li>
 				</ul>
+			</div>
 			</li>
-			<li><a href="#" >Alocaçao</a>
-				<ul>
+			<li><a href="javascript:;" Onclick="mostrarSubMenu('alocacao')">Alocaçao</a>
+				<ul id="alocacao">
 					<li><a href="/Sisfit/alocacao/create">Novo</a></li>
 					<li><a href="/Sisfit/alocacao/index">Listar</a></li>
 				</ul>
 			</li>
-			<li><a href="#" >Mensalidade</a>
-				<ul>
+			<li><a  href="javascript:;" Onclick="mostrarSubMenu('mensalidade')">Mensalidade</a>
+				<ul id="mensalidade">
 					<li><a href="/Sisfit/mensalidade/create">Novo</a></li>
 					<li><a href="/Sisfit/mensalidade/index">Listar</a></li>
 				</ul>
 			</li>
-			<li><a href="#" >Modalidade</a>
-				<ul>
+			<li><a  href="javascript:;" Onclick="mostrarSubMenu('modalidade')">Modalidade</a>
+				<ul id="modalidade">
 					<li><a href="/Sisfit/modalidade/create">Novo</a></li>
 					<li><a href="/Sisfit/modalidade/index">Listar</a></li>
 				</ul>
 			</li>
-			<li><a href="#" >Pagamento</a>
-				<ul>
+			<li><a  href="javascript:;" Onclick="mostrarSubMenu('pagamento')">Pagamento</a>
+				<ul id="pagamento">
 					<li><a href="/Sisfit/pagamento/create">Novo</a></li>
 					<li><a href="/Sisfit/pagamento/index">Listar</a></li>
 				</ul>
 			</li>
-			<li><a href="#" >Professor</a>
-				<ul>
+			<li><a  href="javascript:;" Onclick="mostrarSubMenu('professor')">Professor</a>
+				<ul id="professor">
 					<li><a href="/Sisfit/professor/create">Novo</a></li>
 					<li><a href="/Sisfit/professor/index">Listar</a></li>
 				</ul>
 			</li>
-			<li><a href="#" >Turma</a>
-				<ul>
+			<li><a  href="javascript:;" Onclick="mostrarSubMenu('turma')">Turma</a>
+				<ul id="turma">
 					<li><a href="/Sisfit/turma/create">Novo</a></li>
 					<li><a href="/Sisfit/turma/index">Listar</a></li>
 				</ul>
