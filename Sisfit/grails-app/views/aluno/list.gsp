@@ -4,10 +4,23 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'aluno.label', default: 'Aluno')}" />
-		<title><g:message code="default.list.label" args="[entityName]" /></title>
+		
+	<style>
+	table, td, tr, th{
+	border:1px solid black;
+	}
+	table{
+	width:100%;
+	background-color:#EEDD82;
+	}
+	title{
+	left:50%;
+	}
+	</style>
 	</head>
 	<body>
+	<g:set var="entityName" value="${message(code: 'aluno.label', default: 'Aluno')}" /><br><br><br><br>
+		<title><center><g:message code="default.list.label" args="[entityName]" /></center></title>
 		<div id="list-aluno" class="content scaffold-list" role="main">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">

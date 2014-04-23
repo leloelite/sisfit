@@ -4,8 +4,10 @@ class Pagamento {
 
 	java.sql.Date data
 	double valor
+	 static hasMany = [aluno:Aluno]
 	
     static constraints = {
+		
     }
 	
 	static mapping = {
