@@ -1,6 +1,7 @@
 package sisfit
 
 import org.springframework.dao.DataIntegrityViolationException
+import grails.plugin.jyoshiriro.jasperResponse.renderers.Jasper
 
 class ModalidadeController {
 
@@ -9,6 +10,10 @@ class ModalidadeController {
     def index() {
         redirect(action: "list", params: params)
     }
+	
+	def report() {
+		render params as Jasper
+	}
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
