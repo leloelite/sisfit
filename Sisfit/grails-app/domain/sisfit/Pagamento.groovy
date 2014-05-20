@@ -1,10 +1,18 @@
 package sisfit
 
+import org.joda.time.YearMonth;
+
+import com.sun.org.apache.xerces.internal.impl.dv.xs.YearMonthDV;
+
+import sun.util.calendar.BaseCalendar.Date;
+
 class Pagamento {
 
-	java.sql.Date data
+	java.sql.Date datapg
 	double valor
-	 static hasMany = [aluno:Aluno]
+	Aluno aluno
+	java.sql.Date mensalidade
+			
 	
     static constraints = {
 		
@@ -13,8 +21,11 @@ class Pagamento {
 	static mapping = {
 		table 'pagamento'
 			columns {
-				data column: 'data'
-				valor column: 'valor'				
+				
+				datapg column: 'datapg'
+				valor column: 'valor'
+				mensalidade column: 'mensalidade'
+				aluno column: 'aluno'
 			}
 	}
 }

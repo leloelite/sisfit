@@ -5,6 +5,7 @@ class Turma {
 	String diaSemana
 	double horaInicio
 	double horaFim
+	Modalidade modalidade
 	
     static constraints = {
 		
@@ -16,6 +17,7 @@ class Turma {
 				diaSemana column: 'diaSemana'
 				horaInicio column: 'horaInicio'
 				horaFim Column: 'horaFim'
+				modalidade: 'modalidade'
 			}
 	}
 }

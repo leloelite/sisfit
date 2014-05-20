@@ -1,6 +1,7 @@
 package sisfit
 
 import sun.util.calendar.BaseCalendar.Date;
+import sisfit.Aluno
 
 class Aluno {
 
@@ -12,6 +13,8 @@ class Aluno {
 	String endereco
 	String observacoes
 	String avaliacaoFisica
+	Modalidade modalidade
+	Turma turma
 	
 	static mapping = {
 		tablePerHierarchy false
@@ -25,6 +28,8 @@ class Aluno {
 			endereco column: 'endereco'
 			observacoes column: 'observacoes'
 			avaliacaoFisica column:'avaliacaoFisica'
+			modalidade column: 'modalidade'
+			turma column: 'turma'
 		}
 		
 	}
