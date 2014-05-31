@@ -16,16 +16,16 @@ class UserController {
 	  def user = User.findByLoginAndPassword(params.login, params.password)
 	  if(user){
 		session.user = user
-		flash.message = "Hello ${user.name}!"
-		redirect(controller:"Aluno", action:"")
+		flash.message = "Usuário: ${user.name}!"
+		redirect(controller:"Aluno", action:"create")
 	  }else{
-		flash.message = "Sorry, ${params.login}. Please try again."
+		flash.message = "Desculpe, ${params.login}. tente novamente."
 		redirect(action:"login")
 	  }
 	}
 	
 	def logout = {
-	  flash.message = "Goodbye ${session.user.name}"
+	  flash.message = "Logout realizado ${session.user.name}"
 	  session.user = null
 	  redirect(controller:"User", action:"login")
 	}
@@ -73,7 +73,7 @@ class UserController {
 
 	def auth() {
 		if( !(session?.user?.role == "admin") ){
-			flash.message = "You must be an administrator to perform that task."
+			flash.message = "Voce precisa de nivel administrador."
 			redirect(action:"login")
 			return false
 		}

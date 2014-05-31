@@ -1,7 +1,14 @@
 <html>
   <head>
-    <meta name="layout" content="main" />
-    <title>Login</title>         
+  
+    <title>Login</title> 
+    <style> 
+    div.body{
+border-style:ridge;
+
+border-color:#C4B4B1
+}    
+</style>   
   </head>
   <body>
     <div class="body">

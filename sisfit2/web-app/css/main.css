@@ -108,7 +108,7 @@ img {
 }
 
 .footer {
-	background: #abbf78;
+	background: #C4B4B1;
 	color: #000;
 	clear: both;
 	font-size: 0.8em;
@@ -143,11 +143,6 @@ img {
 	zoom: 1;
 }
 
-.nav ul {
-	overflow: hidden;
-	padding-left: 0;
-	zoom: 1;
-}
 
 .nav li {
 	display: block;

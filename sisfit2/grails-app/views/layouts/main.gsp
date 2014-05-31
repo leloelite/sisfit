@@ -15,22 +15,116 @@
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
 		<g:layoutHead/>
-		<g:javascript library="application"/>		
 		<r:layoutResources />
 		<div id="header">
-  <p><g:link class="header-main" controller="entry">Blogito</g:link></p>
-  <p class="header-sub">A tiny little blog</p>
-  
-  <div id="loginHeader">
+		<style>
+
+.menu{
+list-style-type:none;
+float:left;
+padding-top:15px;
+padding-bottom:15px;
+padding-right:10px;
+padding-left:10px;
+background-color:#C4B4B1;
+border-radius: 10px;
+margin:auto;
+width:98%;
+border-width:5px;
+}
+
+.menu li{
+position:relative;
+float:left;
+padding-left:10px;
+padding-rigth:10px;
+background-color:#8B4F4F;
+padding-top:3px;
+padding-bottom:5px;
+border-radius: 10px;
+margin:7px;
+left: 0%;
+margin-left: 0px;
+width:150px;
+height:25px;
+line-height:25px;
+}
+
+.menu li a {
+font-family:Tahoma;
+font-size:13px;
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menu li ul {
+position:absolute;
+top::28px;
+left:-20px;
+display:none;
+}
+
+.menu li:hover ul, .menu lu ul li:hover ul, .menu li.over ul, .menu li ul li.over ul {
+	display:block;
+}
+
+.menu li ul li {
+border:1px solid #990000;
+display:block;
+width:150px;
+height:25px;
+line-height:25px;
+}
+
+</style>
+</head>
+	<body>
+		<div class="menu">
+		<g:javascript> 
+		function mostrarSubMenu(id){
+			if(document.getElementById(id).style.display=='none'){document.getElementById(id).style.display='block'}else{document.getElementById(id).style.display='none'};
+		}
+		</g:javascript>
+			<li><a href="javascript:;" Onclick="mostrarSubMenu('aluno')">Aluno</a>
+			<div>
+				<ul id="aluno">
+					<li><a href="/Sisfit/aluno/create">Novo</a></li>
+					<li><a href="/Sisfit/aluno/index">Listar</a></li>
+				</ul>
+			</div>
+			</li>
+			<li><a  href="javascript:;" Onclick="mostrarSubMenu('modalidade')">Modalidade</a>
+				<ul id="modalidade">
+					<li><a href="/Sisfit/modalidade/create">Novo</a></li>
+					<li><a href="/Sisfit/modalidade/index">Listar</a></li>
+				</ul>
+			</li>
+			<li><a  href="javascript:;" Onclick="mostrarSubMenu('pagamento')">Pagamento</a>
+				<ul id="pagamento">
+					<li><a href="/Sisfit/pagamento/create">Novo</a></li>
+					<li><a href="/Sisfit/pagamento/index">Listar</a></li>
+				</ul>
+			</li>
+			<li><a  href="javascript:;" Onclick="mostrarSubMenu('professor')">Professor</a>
+				<ul id="professor">
+					<li><a href="/Sisfit/professor/create">Novo</a></li>
+					<li><a href="/Sisfit/professor/index">Listar</a></li>
+				</ul>
+			</li>
+			<li><a  href="javascript:;" Onclick="mostrarSubMenu('turma')">Turma</a>
+				<ul id="turma">
+					<li><a href="/Sisfit/turma/create">Novo</a></li>
+					<li><a href="/Sisfit/turma/index">Listar</a></li>
+				</ul>
+			</li>
+			<div id="loginHeader">
     <g:loginControl />
   </div>
-</div>
-	</head>
-	<body>
-		<div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+		</div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
+		<g:javascript library="application"/>
 		<r:layoutResources />
 	</body>
 </html>
