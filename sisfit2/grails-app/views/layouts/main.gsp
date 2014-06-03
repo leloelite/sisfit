@@ -88,33 +88,33 @@ line-height:25px;
 			<li><a href="javascript:;" Onclick="mostrarSubMenu('aluno')">Aluno</a>
 			<div>
 				<ul id="aluno">
-					<li><a href="/Sisfit/aluno/create">Novo</a></li>
-					<li><a href="/Sisfit/aluno/index">Listar</a></li>
+					<li><a href="/sisfit2/aluno/create">Novo</a></li>
+					<li><a href="/sisfit2/aluno/index">Listar</a></li>
 				</ul>
 			</div>
 			</li>
 			<li><a  href="javascript:;" Onclick="mostrarSubMenu('modalidade')">Modalidade</a>
 				<ul id="modalidade">
-					<li><a href="/Sisfit/modalidade/create">Novo</a></li>
-					<li><a href="/Sisfit/modalidade/index">Listar</a></li>
+					<li><a href="/sisfit2/modalidade/create">Novo</a></li>
+					<li><a href="/sisfit2/modalidade/index">Listar</a></li>
 				</ul>
 			</li>
 			<li><a  href="javascript:;" Onclick="mostrarSubMenu('pagamento')">Pagamento</a>
 				<ul id="pagamento">
-					<li><a href="/Sisfit/pagamento/create">Novo</a></li>
-					<li><a href="/Sisfit/pagamento/index">Listar</a></li>
+					<li><a href="/sisfit2/pagamento/create">Novo</a></li>
+					<li><a href="/sisfit2/pagamento/index">Listar</a></li>
 				</ul>
 			</li>
 			<li><a  href="javascript:;" Onclick="mostrarSubMenu('professor')">Professor</a>
 				<ul id="professor">
-					<li><a href="/Sisfit/professor/create">Novo</a></li>
-					<li><a href="/Sisfit/professor/index">Listar</a></li>
+					<li><a href="/sisfit2/professor/create">Novo</a></li>
+					<li><a href="/sisfit2/professor/index">Listar</a></li>
 				</ul>
 			</li>
 			<li><a  href="javascript:;" Onclick="mostrarSubMenu('turma')">Turma</a>
 				<ul id="turma">
-					<li><a href="/Sisfit/turma/create">Novo</a></li>
-					<li><a href="/Sisfit/turma/index">Listar</a></li>
+					<li><a href="/sisfit2/turma/create">Novo</a></li>
+					<li><a href="/sisfit2/turma/index">Listar</a></li>
 				</ul>
 			</li>
 			<div id="loginHeader">

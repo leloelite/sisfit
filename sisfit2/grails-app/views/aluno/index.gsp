@@ -58,6 +58,11 @@
 				</g:each>
 				</tbody>
 			</table>
+			<g:form action="report" target="blank">
+			nome: <input name="nome"/>
+			<br>
+			<input type="submit" value="Gerar">
+			</g:form>
 			<div class="pagination">
 				<g:paginate total="${alunoInstanceCount ?: 0}" />
 			</div>

@@ -3,6 +3,7 @@ package sisfit2
 
 
 import static org.springframework.http.HttpStatus.*
+import grails.plugin.jyoshiriro.jasperResponse.renderers.Jasper
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
@@ -23,6 +24,10 @@ class AlunoController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+	def report() {
+		render params as Jasper
+	}
+	
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Aluno.list(params), model:[alunoInstanceCount: Aluno.count()]

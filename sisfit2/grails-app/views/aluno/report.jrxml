@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="aluno" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9f8577e4-4423-49b8-b4c0-bf3562c209ee">
+	<parameter name="nome" class="java.lang.String"/>
+	<parameter name="cpf" class="java.lang.String"/>
+	<parameter name="modalidade" class="java.lang.String"/>
+	<parameter name="turma" class="java.lang.String"/>
+	<parameter name="telefone" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select * from aluno where nome like $P{nome}]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="version" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="avaliacaoFisica" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpf" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endereco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="modalidade" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nascimento" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="observacoes" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rg" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefone" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="turma" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="117" y="0" width="317" height="79" uuid="1394cd82-15cd-4878-8184-496aa550fbb7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Adobe Garamond Pro" size="48"/>
+				</textElement>
+				<text><![CDATA[Relatorio Sisfit]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="157" y="0" width="240" height="35" uuid="a70bdaf8-4463-4c76-8926-2493440933af"/>
+				<textElement textAlignment="Center">
+					<font fontName="BatangChe" size="24"/>
+				</textElement>
+				<text><![CDATA[Relatorio de Alunos]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="19" width="100" height="20" uuid="8961c374-f413-4dc4-a653-a3a4e724bd9f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="19" width="100" height="20" uuid="e89833ea-37b4-48b4-958f-09149cb4a212"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="19" width="100" height="20" uuid="5af35cf6-8c05-4a22-aa28-6c37b61959fb"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Modalidades]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="19" width="100" height="20" uuid="e1d18f02-a9e3-4b11-a3ae-915cf6f7a787"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Turma]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="19" width="100" height="20" uuid="94813462-01be-4e69-9e11-70e264316e56"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="20" uuid="a49390ad-39d6-4c08-beee-974c5cce059f"/>
+				<textFieldExpression><![CDATA[$P{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="10" width="100" height="20" uuid="181e96c5-a407-4f25-9f4d-8301a9e54765"/>
+				<textFieldExpression><![CDATA[$P{cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="10" width="100" height="20" uuid="a60e4e97-f2cc-43c0-a129-60416be1e9f2"/>
+				<textFieldExpression><![CDATA[$P{modalidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="10" width="100" height="20" uuid="a8ffed21-1fb4-4577-85ce-cd4c7a28ee1c"/>
+				<textFieldExpression><![CDATA[$P{turma}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="10" width="100" height="20" uuid="f3a4da74-e2c2-4175-8c21-878d17b6a89f"/>
+				<textFieldExpression><![CDATA[$P{telefone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
