@@ -54,7 +54,7 @@
 				<li class="fieldcontain">
 					<span id="modalidade-label" class="property-label"><g:message code="aluno.modalidade.label" default="Modalidade" /></span>
 					
-						<span class="property-value" aria-labelledby="modalidade-label"><g:link controller="modalidade" action="show" id="${alunoInstance?.modalidade?.id}">${alunoInstance?.modalidade?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="modalidade-label"><g:link controller="modalidade" action="show" id="${alunoInstance?.modalidade?.id}">${alunoInstance?.modalidade?.nome.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -108,7 +108,7 @@
 				<li class="fieldcontain">
 					<span id="turma-label" class="property-label"><g:message code="aluno.turma.label" default="Turma" /></span>
 					
-						<span class="property-value" aria-labelledby="turma-label"><g:link controller="turma" action="show" id="${alunoInstance?.turma?.id}">${alunoInstance?.turma?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="turma-label"><g:link controller="turma" action="show" id="${alunoInstance?.turma?.id}">${alunoInstance?.turma?.diaSemana.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

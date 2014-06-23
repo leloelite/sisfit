@@ -7,7 +7,7 @@
 		<g:message code="pagamento.aluno.label" default="Aluno" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="aluno" name="aluno.id" from="${sisfit2.Aluno.list()}" optionKey="id" required="" value="${pagamentoInstance?.aluno?.id}" class="many-to-one"/>
+	<g:select id="aluno" name="aluno.id" from="${sisfit2.Aluno.list()}" optionKey="id" optionValue="nome" required="" value="${pagamentoInstance?.aluno?.id}" class="many-to-one"/>
 
 </div>
 

@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYP html>
+<html >
 	<head>
-		<meta name="layout" content="main">
+		<meta name="layout" content="main" charset="utf-8">
 		<g:set var="entityName" value="${message(code: 'aluno.label', default: 'Aluno')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>

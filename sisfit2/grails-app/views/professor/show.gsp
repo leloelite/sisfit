@@ -27,7 +27,7 @@
 				<li class="fieldcontain">
 					<span id="modalidade-label" class="property-label"><g:message code="professor.modalidade.label" default="Modalidade" /></span>
 					
-						<span class="property-value" aria-labelledby="modalidade-label"><g:link controller="modalidade" action="show" id="${professorInstance?.modalidade?.id}">${professorInstance?.modalidade?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="modalidade-label"><g:link controller="modalidade" action="show" id="${professorInstance?.modalidade?.id}">${professorInstance?.modalidade?.nome.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

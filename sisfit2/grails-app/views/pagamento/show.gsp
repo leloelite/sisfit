@@ -27,7 +27,7 @@
 				<li class="fieldcontain">
 					<span id="aluno-label" class="property-label"><g:message code="pagamento.aluno.label" default="Aluno" /></span>
 					
-						<span class="property-value" aria-labelledby="aluno-label"><g:link controller="aluno" action="show" id="${pagamentoInstance?.aluno?.id}">${pagamentoInstance?.aluno?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="aluno-label"><g:link controller="aluno" action="show" id="${pagamentoInstance?.aluno?.id}">${pagamentoInstance?.aluno?.nome.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

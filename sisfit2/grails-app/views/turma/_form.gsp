@@ -34,7 +34,7 @@
 		<g:message code="turma.modalidade.label" default="Modalidade" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="modalidade" name="modalidade.id" from="${sisfit2.Modalidade.list()}" optionKey="id" required="" value="${turmaInstance?.modalidade?.id}" class="many-to-one"/>
+	<g:select id="modalidade" name="modalidade.id" from="${sisfit2.Modalidade.list()}" optionKey="id" required="" optionValue="nome" value="${turmaInstance?.modalidade?.id}" class="many-to-one"/>
 
 </div>
 

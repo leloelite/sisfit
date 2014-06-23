@@ -38,7 +38,7 @@
 				<g:each in="${pagamentoInstanceList}" status="i" var="pagamentoInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${pagamentoInstance.id}">${fieldValue(bean: pagamentoInstance, field: "aluno")}</g:link></td>
+						<td><g:link action="show" id="${pagamentoInstance.id}">${fieldValue(bean: pagamentoInstance, field: "aluno.nome")}</g:link></td>
 					
 						<td><g:formatDate date="${pagamentoInstance.datapg}" /></td>
 					

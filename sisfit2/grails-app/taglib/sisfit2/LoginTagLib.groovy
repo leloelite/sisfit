@@ -3,10 +3,10 @@ package sisfit2
 class LoginTagLib {
     def loginControl = {
     if(session.user){
-      out << "Hello ${session.user.name} "
-      out << """[${link(action:"logout", controller:"user"){"Logout"}}]"""
+      out << "Ola ${session.user.name} "
+      out << """[${link(action:"logout", controller:"user"){"Sair"}}]"""
     } else {
-      out << """[${link(action:"login", controller:"user"){"Login"}}]"""      
+      out << """[${link(action:"login", controller:"user"){"Entrar"}}]"""      
     }
   }
 }

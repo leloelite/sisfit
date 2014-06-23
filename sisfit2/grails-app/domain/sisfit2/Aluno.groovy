@@ -8,13 +8,13 @@ class Aluno {
 	String nome
 	int cpf
 	int rg
-	java.sql.Date nascimento
+	java.util.Date nascimento
 	int telefone
 	String endereco
 	String observacoes
 	String avaliacaoFisica
 	Modalidade modalidade
-	Turma turma
+	Turma turma 	
 	
 	static mapping = {
 		tablePerHierarchy false

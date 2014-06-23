@@ -42,7 +42,7 @@
 				<g:each in="${professorInstanceList}" status="i" var="professorInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${professorInstance.id}">${fieldValue(bean: professorInstance, field: "modalidade")}</g:link></td>
+						<td><g:link action="show" id="${professorInstance.id}">${fieldValue(bean: professorInstance, field: "modalidade.nome")}</g:link></td>
 					
 						<td>${fieldValue(bean: professorInstance, field: "cpf")}</td>
 					

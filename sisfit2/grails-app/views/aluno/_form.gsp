@@ -34,7 +34,7 @@
 		<g:message code="aluno.modalidade.label" default="Modalidade" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="modalidade" name="modalidade.id" from="${sisfit2.Modalidade.list()}" optionKey="id" required="" value="${alunoInstance?.modalidade?.id}" class="many-to-one"/>
+	<g:select id="modalidade" name="modalidade.id" from="${sisfit2.Modalidade.list()}" optionKey="id" optionValue="nome" multiple="multiple" required="" value="${alunoInstance?.modalidade?.id}" class="many-to-one"/>
 
 </div>
 
@@ -71,7 +71,6 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:field name="rg" type="number" value="${alunoInstance.rg}" required=""/>
-
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: alunoInstance, field: 'telefone', 'error')} required">
@@ -88,7 +87,6 @@
 		<g:message code="aluno.turma.label" default="Turma" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="turma" name="turma.id" from="${sisfit2.Turma.list()}" optionKey="id" required="" value="${alunoInstance?.turma?.id}" class="many-to-one"/>
-
+	<g:select id="turma" name="turma.id" from="${sisfit2.Turma.list()}" optionKey="id" optionValue="diaSemana" required="" value="${alunoInstance?.turma?.id}" class="many-to-one"/>
 </div>
 

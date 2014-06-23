@@ -23,7 +23,8 @@
 			<table>
 			<thead>
 					<tr>
-					
+					    <g:sortableColumn property="id" title="${message(code: 'aluno.id.label', default: 'Matricula')}" />
+					    
 						<g:sortableColumn property="avaliacaoFisica" title="${message(code: 'aluno.avaliacaoFisica.label', default: 'Avaliacao Fisica')}" />
 					
 						<g:sortableColumn property="cpf" title="${message(code: 'aluno.cpf.label', default: 'Cpf')}" />
@@ -42,13 +43,15 @@
 				<g:each in="${alunoInstanceList}" status="i" var="alunoInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${alunoInstance.id}">${fieldValue(bean: alunoInstance, field: "avaliacaoFisica")}</g:link></td>
+						<td><g:link action="show" id="${alunoInstance.id}">${fieldValue(bean: alunoInstance, field: "id")}</g:link></td>
+					
+						<td>${fieldValue(bean: alunoInstance, field: "avaliacaoFisica")}</td>
 					
 						<td>${fieldValue(bean: alunoInstance, field: "cpf")}</td>
 					
 						<td>${fieldValue(bean: alunoInstance, field: "endereco")}</td>
 					
-						<td>${fieldValue(bean: alunoInstance, field: "modalidade")}</td>
+						<td>${fieldValue(bean: alunoInstance, field: "modalidade.nome")}</td>
 					
 						<td><g:formatDate date="${alunoInstance.nascimento}" /></td>
 					

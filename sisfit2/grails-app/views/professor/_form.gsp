@@ -7,7 +7,7 @@
 		<g:message code="professor.modalidade.label" default="Modalidade" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="modalidade" name="modalidade.id" from="${sisfit2.Modalidade.list()}" optionKey="id" required="" value="${professorInstance?.modalidade?.id}" class="many-to-one"/>
+	<g:select id="modalidade" name="modalidade.id" from="${sisfit2.Modalidade.list()}" optionKey="id" optionValue="nome" required="" value="${professorInstance?.modalidade?.id}" class="many-to-one"/>
 
 </div>
 

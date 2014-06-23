@@ -44,7 +44,7 @@
 					
 						<td>${fieldValue(bean: turmaInstance, field: "horaInicio")}</td>
 					
-						<td>${fieldValue(bean: turmaInstance, field: "modalidade")}</td>
+						<td>${fieldValue(bean: turmaInstance, field: "modalidade.nome")}</td>
 					
 					</tr>
 				</g:each>

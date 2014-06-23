@@ -4,10 +4,10 @@ import sisfit2.Aluno;
 
 class Pagamento {
 
-	java.sql.Date datapg
+	java.util.Date datapg
 	double valor
 	Aluno aluno
-	java.sql.Date mensalidade
+	java.util.Date mensalidade
 			
 	
     static constraints = {

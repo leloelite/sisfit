@@ -12,7 +12,7 @@ border-color:#C4B4B1
   </head>
   <body>
     <div class="body">
-      <h1>Login</h1>
+      <h1>Entrar</h1>
       <g:if test="${flash.message}">
         <div class="message">${flash.message}</div>
       </g:if>
@@ -22,7 +22,7 @@ border-color:#C4B4B1
             <tbody>            
               <tr class="prop">
                 <td class="name">
-                  <label for="login">Login:</label>
+                  <label for="login">Usuario:</label>
                 </td>
                 <td>
                   <input type="text" id="login" name="login"/>
@@ -31,7 +31,7 @@ border-color:#C4B4B1
           
               <tr class="prop">
                 <td class="name">
-                  <label for="password">Password:</label>
+                  <label for="password">Senha:</label>
                 </td>
                 <td>
                   <input type="password" id="password" name="password"/>

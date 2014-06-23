@@ -6,10 +6,10 @@ class Professor {
 	
 	String nome
 	int cpf
-	java.sql.Date data
+	java.util.Date data
 	int telefone
 	int rg
-	java.sql.Date nascimento
+	java.util.Date nascimento
 	String endereco
 	String observacoes
 	int ctps

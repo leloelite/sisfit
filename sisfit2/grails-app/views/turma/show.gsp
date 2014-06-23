@@ -54,7 +54,7 @@
 				<li class="fieldcontain">
 					<span id="modalidade-label" class="property-label"><g:message code="turma.modalidade.label" default="Modalidade" /></span>
 					
-						<span class="property-value" aria-labelledby="modalidade-label"><g:link controller="modalidade" action="show" id="${turmaInstance?.modalidade?.id}">${turmaInstance?.modalidade?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="modalidade-label"><g:link controller="modalidade" action="show" id="${turmaInstance?.modalidade?.id}">${turmaInstance?.modalidade?.nome.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
